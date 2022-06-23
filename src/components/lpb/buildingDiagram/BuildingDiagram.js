@@ -140,22 +140,35 @@ class BuildingDiagram {
                 .attr("fill", style.fill)
                 .attr("id", d.properties.id)
                 .attr("code", d.properties.code);//添加房屋code
-            //1、房间矩形
-            d3.select(this).append("path")
-                .attr("d", function (d) {
-                    return "M0,0L" + (d.geometry.coordinates[0][1][0] - d.geometry.coordinates[0][0][0]) + "," +
-                        (d.geometry.coordinates[0][1][1] - d.geometry.coordinates[0][0][1]) +
-                        "L" + (d.geometry.coordinates[0][2][0] - d.geometry.coordinates[0][0][0]) +
-                        "," + (d.geometry.coordinates[0][2][1] - d.geometry.coordinates[0][0][1]) + "L" +
-                        (d.geometry.coordinates[0][3][0] - d.geometry.coordinates[0][0][0]) + "," +
-                        (d.geometry.coordinates[0][3][1] - d.geometry.coordinates[0][0][1]) + "Z";
-                })//根据房屋状态 condition渲染不同样式的room
-                .attr("fill", style.fill)//房屋状态（已售、未售等等）
-                .attr("stroke-width", "0.5px")
-                .attr("stroke", "#00B0FD")
-                .attr("class", "room");
             let width = (d.geometry.coordinates[0][1][0] - d.geometry.coordinates[0][0][0]);
             let height = (d.geometry.coordinates[0][3][1] - d.geometry.coordinates[0][0][1]);
+            //1、房间矩形
+
+            // d3.select(this).append("path")
+            //     .attr("d", function (d) {
+            //         return "M0,0L" + (d.geometry.coordinates[0][1][0] - d.geometry.coordinates[0][0][0]) + "," +
+            //             (d.geometry.coordinates[0][1][1] - d.geometry.coordinates[0][0][1]) +
+            //             "L" + (d.geometry.coordinates[0][2][0] - d.geometry.coordinates[0][0][0]) +
+            //             "," + (d.geometry.coordinates[0][2][1] - d.geometry.coordinates[0][0][1]) + "L" +
+            //             (d.geometry.coordinates[0][3][0] - d.geometry.coordinates[0][0][0]) + "," +
+            //             (d.geometry.coordinates[0][3][1] - d.geometry.coordinates[0][0][1]) + "Z";
+            //     })//根据房屋状态 condition渲染不同样式的room
+            //     .attr("fill", style.fill)//房屋状态（已售、未售等等）
+            //     .attr("stroke-width", "0.5px")
+            //     .attr("stroke", "#00B0FD")
+            //     .attr("class", "room");
+
+            d3.select(this).append("rect")
+                .attr("x", 2)
+                .attr("y", 5)
+                .attr("ry", 10)
+                .attr("ry", 10)
+                .attr("width", width - 16)
+                .attr("height", height - 10)
+                .attr("fill", "#807f26")
+                .attr("stroke", "#bec9d7")
+                .attr("stroke-width", "2px")
+
             d3.select(this)
                 .attr("cursor", "pointer")   //鼠标小手样式
                 .on("mouseover", function (d, i) {
@@ -206,8 +219,8 @@ class BuildingDiagram {
         // 楼层 type = 2
         d3.selectAll(`#${self.target} .floorG`).each(function (d) {
             let floorStyle = {
-                fill: '#044071',
-                fontColor: '#d4f1d2',
+                fill: '#ecf0f3',
+                fontColor: '#9EB5CE',
                 fontFamily: '微软雅黑',
                 fontSize: '16px'
             }
@@ -221,9 +234,18 @@ class BuildingDiagram {
                         (d.geometry.coordinates[0][3][1] - d.geometry.coordinates[0][0][1]) + "Z";
                 })
                 .attr("fill", floorStyle.fill)
-                .attr("stroke-width", "0.5px")
-                .attr("stroke", "#00B0FD")
+                // .attr("stroke-width", "0.5px")
+                // .attr("stroke", "#00B0FD")
                 .attr("class", "floor")
+            // 楼层设置一条横向的线
+            let line = d3.select(this)
+                .append("line")
+                .attr("x1",d.geometry.coordinates[0][3][0] - d.geometry.coordinates[0][0][0])
+                .attr("y1",d.geometry.coordinates[0][3][1] - d.geometry.coordinates[0][0][1])
+                .attr("x2",d.geometry.coordinates[0][2][0] - d.geometry.coordinates[0][0][0]- 10)
+                .attr("y2",d.geometry.coordinates[0][2][1] - d.geometry.coordinates[0][0][1])
+                .attr("stroke", "#b6c2d3")
+                .attr("stroke-width", "2")
             // 楼层文本设置
             let floorWidth = d.geometry.coordinates[0][1][0] - d.geometry.coordinates[0][0][0];
             let floorHeight = d.geometry.coordinates[0][3][1] - d.geometry.coordinates[0][0][1];
@@ -234,11 +256,12 @@ class BuildingDiagram {
                 .attr('font-family', floorStyle.fontFamily) //字体类型
                 .attr('fill', floorStyle.fontColor)//字体颜色
                 .attr('font-size', floorStyle.fontSize) //字体大小
+                .attr('font-weight', 'bold') //字体大小
                 .attr('text-anchor', 'middle') // 水平居中
                 .attr('dominant-baseline', 'middle') // 垂直居中
                 .text(function (d) {
                     if (d.properties.fh) {
-                        return d.properties.fh
+                        return d.properties.fh + "F"
                     }
                     return "";
                 })
@@ -246,8 +269,8 @@ class BuildingDiagram {
         // 单元 type = 3
         d3.selectAll(`#${self.target} .unitListG`).each(function (d) {
             let style = {
-                fill: '#044071',
-                fontColor: '#d4f1d2',
+                fill: '#ecf0f3',
+                fontColor: '#a7b2bf',
                 fontFamily: '微软雅黑',
                 fontSize: '16px'
             };
@@ -267,6 +290,15 @@ class BuildingDiagram {
                 .attr("stroke-width", "0.5px")
                 .attr("stroke", "#00B0FD")
                 .attr("class", "floor")
+            // 楼层设置一条纵向的线
+            // let line = d3.select(this)
+            //     .append("line")
+            //     .attr("x1",d.geometry.coordinates[0][3][0] - d.geometry.coordinates[0][0][0])
+            //     .attr("y1",d.geometry.coordinates[0][3][1] - d.geometry.coordinates[0][0][1])
+            //     .attr("x2",d.geometry.coordinates[0][2][0] - d.geometry.coordinates[0][0][0]- 10)
+            //     .attr("y2",d.geometry.coordinates[0][2][1] - d.geometry.coordinates[0][0][1])
+            //     .attr("stroke", "#b6c2d3")
+            //     .attr("stroke-width", "2")
             let entityG = d3.select(this)
                 .append("text")
                 .attr("x", unitListWidth / 2)//单元名偏移量X
@@ -279,7 +311,6 @@ class BuildingDiagram {
                 .text(function (d) {
                     if (d.properties.fh) {
                         return d.properties.fh
-                        // return "单元号"
                     }
                     return "";
                 })
@@ -287,7 +318,7 @@ class BuildingDiagram {
         // 表头 type = 4
         d3.selectAll(`#${self.target} .headerG`).each(function (d) {
             let style = {
-                fill: '#044071'
+                fill: '#ecf0f3'
             };
             // 单元文本设置
             let headerGHeight = d.geometry.coordinates[0][3][1] - d.geometry.coordinates[0][0][1];
@@ -301,9 +332,33 @@ class BuildingDiagram {
                         (d.geometry.coordinates[0][3][1] - d.geometry.coordinates[0][0][1]) + "Z";
                 })
                 .attr("fill", style.fill)
-                .attr("stroke-width", "0.5px")
-                .attr("stroke", "#00B0FD")
+                // .attr("stroke-width", "0.5px")
+                // .attr("stroke", "#00B0FD")
                 .attr("class", "header")
+            let line1 = d3.select(this)
+                .append("line")
+                .attr("x1",0)
+                .attr("y1",0)
+                .attr("x2", function(d) {
+                    if (d.properties.fh == '单元') {
+
+                    } else if (d.properties.fh == '幢') {
+                        return d.geometry.coordinates[0][3][0] - d.geometry.coordinates[0][0][0];
+                    } else { // 层
+                        return d.geometry.coordinates[0][2][0] - d.geometry.coordinates[0][0][0]
+                    }
+                })
+                .attr("y2", function (d) {
+                    if (d.properties.fh == '单元') {
+
+                    } else if (d.properties.fh == '幢') {
+                        return d.geometry.coordinates[0][3][1] - d.geometry.coordinates[0][0][1]
+                    } else {
+                        return d.geometry.coordinates[0][2][1] - d.geometry.coordinates[0][0][1];
+                    }
+                })
+                .attr("stroke", "#b6c2d3")
+                .attr("stroke-width", "2")
 
             let headGLength = d3.selectAll(`#${self.target} .headerG`)._groups[0].length;
             let entityG = d3.select(this)
@@ -330,7 +385,7 @@ class BuildingDiagram {
                         return headGLength == 3 ? headerGHeight / 2 + headerGHeight / 8 : headerGHeight / 2 - headerGHeight / 6;
                     }
                 }) // 偏移量Y
-                .attr('fill', "#fff")//字体颜色
+                .attr('fill', "#a7b2bf")//字体颜色
                 .attr('font-size', "14px") //字体大小
                 .attr('text-anchor', 'middle') // 水平居中
                 .attr('dominant-baseline', 'middle') // 垂直居中

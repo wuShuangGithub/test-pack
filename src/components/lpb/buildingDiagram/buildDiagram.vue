@@ -159,88 +159,86 @@
     }
 </script>
 
-<style lang="less" scoped>
+<style scoped>
     .buildDiagramBox{
         width: 100%;
         height: 100%;
         display: flex;
         flex-direction: column;
-        .buildDiagramLegend{
-            /*height: 40px;*/
-            flex: none;
-            .legendContent{
-                display: flex;
-                margin-bottom: 10px;
-                flex-wrap: wrap;
-                .legendItem{
-                    padding: 0px 12px;
-                    height: 30px;
-                    line-height: 26px;
-                    cursor: pointer;
-                    background: #fff;
-                    border: 1px solid #dcdfe6;
-                    color: #606266;
-                    outline: none;
-                    border-radius: 5px;
-                    cursor: pointer;
-                    margin: 5px;
-                }
-                .legendItem.active{
-                    color: #409eff;
-                    border: 1px solid #409eff;
-                }
-            }
-            .legendDetailsContent{
-                display: flex;
-                margin-bottom: 10px;
-                flex-wrap: wrap;
-                .legendDetailsItem{
-                    padding: 0px 12px;
-                    height: 30px;
-                    line-height: 26px;
-                    cursor: pointer;
-                    background: #fff;
-                    border: 1px solid #dcdfe6;
-                    color: #606266;
-                    outline: none;
-                    border-radius: 5px;
-                    cursor: pointer;
-                    margin: 2px 5px;
-                }
-                .legendDetailsItem.active{
-                    color: #409eff;
-                    border: 1px solid #409eff;
-                }
-            }
-        }
-        .buildDiagramContent {
-            width: 100%;
-            height: 100%;
-            flex: 1;
-            background: #b9d5ea;
-            position: relative;
-            #buildingDiagram{
-                width: 100%;
-                height: 100%;
-            }
-            .buildDiagramOperate{
-                width: 160px;
-                height: 30px;
-                line-height: 30px;
-                position: absolute;
-                right: 10px;
-                top: 3px;
-                background: rgba(21, 45, 76, 0.5);
-                color: #fff;
-                text-align: right;
-                i{
-                    padding: 8px;
-                    font-size: 16px;
-                    cursor: pointer;
-                }
-            }
-        }
     }
-
+    .buildDiagramLegend {
+        flex: none;
+    }
+    .legendContent {
+        display: flex;
+        margin-bottom: 10px;
+        flex-wrap: wrap;
+    }
+    .legendItem{
+        padding: 0px 12px;
+        height: 30px;
+        line-height: 26px;
+        cursor: pointer;
+        background: #fff;
+        border: 1px solid #dcdfe6;
+        color: #606266;
+        outline: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 5px;
+    }
+    .legendItem.active{
+        color: #409eff;
+        border: 1px solid #409eff;
+    }
+    .legendDetailsContent {
+        display: flex;
+        margin-bottom: 10px;
+        flex-wrap: wrap;
+    }
+    .legendDetailsItem{
+        padding: 0px 12px;
+        height: 30px;
+        line-height: 26px;
+        cursor: pointer;
+        background: #fff;
+        border: 1px solid #dcdfe6;
+        color: #606266;
+        outline: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 2px 5px;
+    }
+    .legendDetailsItem.active{
+        color: #409eff;
+        border: 1px solid #409eff;
+    }
+    .buildDiagramContent {
+        width: 100%;
+        height: 100%;
+        flex: 1;
+        background: #ecf0f3;
+        position: relative;
+    }
+    #buildingDiagram{
+        width: 100%;
+        height: 100%;
+    }
+    .buildDiagramOperate {
+        width: 160px;
+        height: 30px;
+        line-height: 30px;
+        position: absolute;
+        right: 10px;
+        top: 3px;
+        background: rgba(21, 45, 76, 0.5);
+        color: #fff;
+        text-align: right;
+    }
+    i{
+        padding: 8px;
+        font-size: 16px;
+        cursor: pointer;
+    }
 
 </style>

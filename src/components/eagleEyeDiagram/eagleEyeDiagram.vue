@@ -6,7 +6,6 @@
 </template>
 
 <script>
-    import * as d3 from 'd3';
     export default {
         name: "eagleEyeDiagram",
         data() {
@@ -49,14 +48,22 @@
             var mapG = svg.append("g")
                 .attr("id","forceGroup");
 
-            var force = d3.layout.force()
-                .nodes(nodes)
-                .links(links)
-                .size([width,height])
-                .linkDistance(100)
-                .charge([-1250])
-                .gravity(0.5)
-                .friction(0.5);
+            // var force = d3.force()
+            //     .nodes(nodes)
+            //     .links(links)
+            //     .size([width,height])
+            //     .linkDistance(100)
+            //     .charge([-1250])
+            //     .gravity(0.5)
+            //     .friction(0.5);
+            var force = d3.forceSimulation(nodes);
+
+            force.force("link", d3.forceLink(links))
+                .force("size",[width,height])
+                .force("linkDistance",100)
+                .force("charge",[-1250])
+                .force("gravity", 0.5)
+                .force("friction",0.5);
             force.start();
             var linkG = mapG.selectAll(".link")
                 .data(links)

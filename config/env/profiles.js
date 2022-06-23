@@ -45,15 +45,6 @@ const serverProxyPath ={
     LCTEST: 'http://192.168.100.159:3000/mock/12/jsmart/',
     FWZL: 'http://192.168.1.185:8086',
     GIS:'http://172.17.10.218:8081/jsmart/'
-
-    // PLATFORM: 'http://192.168.100.159:8080/jsmart/',
-    // WORKFLOW: 'http://192.168.100.159:8080/jsmart/',
-    // ORGANIZATION: 'http://192.168.100.159:8080/jsmart/',
-    // PORTAL: 'http://192.168.100.159:8080/jsmart/',
-    // DEVCENTER:'http://192.168.100.159:8080/jsmart/devcenter/',
-    // LCTEST: 'http://192.168.100.159:3000/mock/12/jsmart/',
-    // FWZL: 'http://192.168.1.185:8086',
-    // GIS:'http://172.17.10.218:8081/jsmart/'
 }
 
 // static路径

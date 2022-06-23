@@ -1,11 +1,6 @@
 <template>
     <div class="content">
-        <h1>WangEditor样例</h1>
         <wang-editor @editorContent="getEditorContent" />
-        <div class="show">
-        <h3>内容预览</h3>
-        <textarea name="" cols="170" rows="20" readonly style="width: 100%" v-model="editorData"></textarea>
-        </div>
     </div>
 </template>
 
@@ -13,7 +8,7 @@
     // 引入子组件
     import WangEditor from "./jsmart-wangEditor/jsmart-wangEditor";
     export default {
-        name: "app",
+        name: "pcWangEditor",
         components: {
             WangEditor
         },
@@ -35,7 +30,7 @@
 
 </script>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
     .content {
         width: 100%;
     }

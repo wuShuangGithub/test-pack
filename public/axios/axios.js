@@ -1,6 +1,6 @@
 import request from './request'
 import qs from 'qs'
-import comUtils from '@utils/comUtils.js'
+import comUtils from '@/utils/commonUtils.js'
 // 定义请求函数
 let AXIOS = {
     get:async (url = '', data, config = {}) => {
