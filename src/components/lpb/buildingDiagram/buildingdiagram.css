@@ -1,0 +1,175 @@
+.background {
+  pointer-events: all;
+  stroke: none;
+  opacity: 1.0;
+  fill: transparent;
+}
+
+.feature {
+}
+
+.roomG.active path {
+  /*stroke-width: 10px;*/
+  /*stroke: #FFBA09;*/
+  fill: #FFBA09;
+  z-index: 1000;
+}
+
+.room.active text {
+  fill: #fff;
+}
+
+.floor.active {
+}
+
+.unit.active {
+}
+
+.charthead.active {
+}
+
+.mesh {
+  fill: none;
+  stroke: #fff;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Style for Custom Tooltip */
+.tooltip {
+  position: absolute;
+  text-align: left;
+  width: 300px;
+  line-height: 35px;
+  padding: 5px;
+  background: rgba(21, 45, 76, 0.7);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px;
+  /*border: #ddd 1px solid;*/
+  border-radius: 3px;
+  pointer-events: none;
+  z-index: 3000;
+  font-size: 12px;
+  word-wrap: break-word;
+}
+
+
+
+.tooltipItem {
+  padding: 0px 10px
+}
+
+.tooltipItem:last-child {
+  border-bottom: none
+}
+
+
+
+.tooltipItem span {
+  color: #fff;
+  font-size: 14px;
+}
+
+.tooltipItem font {
+  color: #fff;
+  font-size: 14px;
+}
+
+.base {
+  margin: 0px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 0px !important;
+}
+.base .common_search_form{ flex: none; position: static}
+/* style for primary container */
+/* PS: The colour #eee is used as an indicator to see click-active areas.
+  If not click-active, it should be gray, otherwise it should be white. */
+.primary {
+  z-index: 1;
+  display: inline-block;
+  /*position: absolute;*/
+  width: 100%;
+  /*left:10%;*/
+  height: 100%;
+}
+
+.chartHeader {
+  background: #7fb3b3;
+  z-index: 1;
+  display: inline-block;
+  position: absolute;
+  width: 10%;
+  height: 100%;
+}
+
+/* style for secondary container */
+/* position is used to lay tertiary container over secondary */
+.secondary {
+  /*width: 200px;
+  height: 150px;*/
+  display: inline-block;
+  position: absolute;
+  top: 97px;
+  right: 19px;
+  z-index: 3;
+  background: white;
+  border: 1px solid #000;
+}
+
+/* style for tertiary container */
+/* z-index allows tertiary to appear above secondary rather than below */
+.tertiary {
+  display: inline-block;
+  position: absolute;
+  top: 100px;
+  right: 20px;
+  z-index: 4;
+}
+
+/* style for extent indicator */
+.extent {
+  fill: none;
+  stroke: red;
+  stroke-width: 3px;
+}
+
+.svg-content-responsive {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+
+.room:hover {
+  fill: rgba(48, 155, 226, 0.5);
+  opacity: 1;
+}
+
+.nameBox {
+  position: absolute;
+  width: 160px;
+  right: 0px;
+  top: 120px;
+  z-index: 1000;
+  font-size: 14px;
+  padding: 10px;
+  color: #8fbbe6;
+  background-color: rgba(21, 45, 76, 0.7);
+  border-radius: 10px;
+}
+
+.nullData {
+  width: 100%;
+  height: 100%;
+}
+
+.unitListG text {
+  text-align: center;
+  align-items: center;
+}
+

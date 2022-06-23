@@ -1,0 +1,819 @@
+{
+  "style": [
+    {
+      "comment": "房屋用途-住宅",
+      "id": "1",
+      "width": "80",
+      "height": "100",
+      "fill": "#35e528",
+      "stroke-width": "0.1",
+      "stroke": "#666",
+      "cursor": "pointer"
+    },
+    {
+      "comment": "房屋用途-非住宅",
+      "id": "2",
+      "width": "80",
+      "height": "100",
+      "fill": "#ff9934",
+      "stroke-width": "0.1",
+      "stroke": "#666",
+      "cursor": "pointer"
+    },
+    {
+      "comment": "房屋性质-商品房",
+      "id": "3",
+      "width": "80",
+      "height": "100",
+      "fill": "#3dc237",
+      "stroke-width": "0.1",
+      "stroke": "#666",
+      "cursor": "pointer"
+    },
+    {
+      "comment": "房屋性质-安置房",
+      "id": "4",
+      "width": "80",
+      "height": "100",
+      "fill": "#ff9934",
+      "stroke-width": "0.1",
+      "stroke": "#666",
+      "cursor": "pointer"
+    },
+    {
+      "comment": "房屋性质-公租房",
+      "id": "5",
+      "width": "80",
+      "height": "100",
+      "fill": "#ad2067",
+      "stroke-width": "0.1",
+      "stroke": "#666",
+      "cursor": "pointer"
+    },
+    {
+      "comment": "房屋性质-房改房",
+      "id": "6",
+      "width": "80",
+      "height": "100",
+      "fill": "#ff0c18",
+      "stroke-width": "0.1",
+      "stroke": "#666",
+      "cursor": "pointer"
+    },
+    {
+      "comment": "房屋性质-直管公房",
+      "id": "7",
+      "width": "80",
+      "height": "100",
+      "fill": "#4a3aed",
+      "stroke-width": "0.1",
+      "stroke": "#666",
+      "cursor": "pointer"
+    },
+    {
+      "comment": "房屋性质-经济适用房",
+      "id": "8",
+      "width": "80",
+      "height": "100",
+      "fill": "#09b0fb",
+      "stroke-width": "0.1",
+      "stroke": "#666",
+      "cursor": "pointer"
+    },
+    {
+      "comment": "房屋性质-其他",
+      "id": "9",
+      "width": "80",
+      "height": "100",
+      "fill": "#9d9dae",
+      "stroke-width": "0.1",
+      "stroke": "#666",
+      "cursor": "pointer"
+    },
+    {
+      "comment": "批准可售状态-可售",
+      "id": "10",
+      "width": "80",
+      "height": "100",
+      "fill": "#3dc237",
+      "stroke-width": "0.1",
+      "stroke": "#666",
+      "cursor": "pointer"
+    },
+    {
+      "comment": "批准可售状态-不可售",
+      "id": "11",
+      "width": "80",
+      "height": "100",
+      "fill": "#dc2406",
+      "stroke-width": "0.1",
+      "stroke": "#666",
+      "cursor": "pointer"
+    },
+    {
+      "comment": "实际预销售状态-已预订",
+      "id": "12",
+      "width": "80",
+      "height": "100",
+      "fill": "#09b0fb",
+      "stroke-width": "0.1",
+      "stroke": "#666",
+      "cursor": "pointer"
+    },
+    {
+      "comment": "实际预销售状态-已售",
+      "id": "13",
+      "width": "80",
+      "height": "100",
+      "fill": "#ff9934",
+      "stroke-width": "0.1",
+      "stroke": "#666",
+      "cursor": "pointer"
+    },
+    {
+      "comment": "实际预销售状态-未售",
+      "id": "15",
+      "width": "80",
+      "height": "100",
+      "fill": "#cdf1ff",
+      "stroke-width": "0.1",
+      "stroke": "#666",
+      "cursor": "pointer"
+    },
+    {
+      "comment": "实际预销售状态-其他",
+      "id": "40",
+      "width": "80",
+      "height": "100",
+      "fill": "#9d9dae",
+      "stroke-width": "0.1",
+      "stroke": "#666",
+      "cursor": "pointer"
+    },
+    {
+      "comment": "预售房屋用途-住宅",
+      "id": "16",
+      "width": "80",
+      "height": "100",
+      "fill": "#3dc237",
+      "stroke-width": "0.1",
+      "stroke": "#666",
+      "cursor": "pointer"
+    },
+    {
+      "comment": "预售房屋用途-商业",
+      "id": "17",
+      "width": "80",
+      "height": "100",
+      "fill": "#ff9934",
+      "stroke-width": "0.1",
+      "stroke": "#666",
+      "cursor": "pointer"
+    },
+    {
+      "comment": "预售房屋用途-写字楼",
+      "id": "18",
+      "width": "80",
+      "height": "100",
+      "fill": "#4a3aed",
+      "stroke-width": "0.1",
+      "stroke": "#666",
+      "cursor": "pointer"
+    },
+    {
+      "comment": "预售房屋用途-物业用房",
+      "id": "19",
+      "width": "80",
+      "height": "100",
+      "fill": "#dc2406",
+      "stroke-width": "0.1",
+      "stroke": "#666",
+      "cursor": "pointer"
+    },
+    {
+      "comment": "预售房屋用途-其他",
+      "id": "20",
+      "width": "80",
+      "height": "100",
+      "fill": "#9d9dae",
+      "stroke-width": "0.1",
+      "stroke": "#666",
+      "cursor": "pointer"
+    },
+    {
+      "comment": "公租房配租状态-未配租",
+      "id": "21",
+      "width": "80",
+      "height": "100",
+      "fill": "#4de7e2",
+      "stroke-width": "0.1",
+      "stroke": "#666",
+      "cursor": "pointer"
+    },
+    {
+      "comment": "公租房配租状态-已配租",
+      "id": "22",
+      "width": "80",
+      "height": "100",
+      "fill": "#fe7e09",
+      "stroke-width": "0.1",
+      "stroke": "#666",
+      "cursor": "pointer"
+    },
+    {
+      "comment": "公租房配租状态-已划拨",
+      "id": "23",
+      "width": "80",
+      "height": "100",
+      "fill": "#09b0fb",
+      "stroke-width": "0.1",
+      "stroke": "#666",
+      "cursor": "pointer"
+    },
+    {
+      "comment": "公租房配租状态-已选房",
+      "id": "24",
+      "width": "80",
+      "height": "100",
+      "fill": "#3dc237",
+      "stroke-width": "0.1",
+      "stroke": "#666",
+      "cursor": "pointer"
+    },
+    {
+      "comment": "公租房配租状态-其他",
+      "id": "100",
+      "width": "80",
+      "height": "100",
+      "fill": "#9d9dae",
+      "stroke-width": "0.1",
+      "stroke": "#666",
+      "cursor": "pointer"
+    },
+    {
+      "comment": "缴交状态-已缴交",
+      "id": "25",
+      "width": "80",
+      "height": "100",
+      "fill": "#3dc237",
+      "stroke-width": "0.1",
+      "stroke": "#666",
+      "cursor": "pointer"
+    },
+    {
+      "comment": "缴交状态-未缴交",
+      "id": "26",
+      "width": "80",
+      "height": "100",
+      "fill": "#fe7e09",
+      "stroke-width": "0.1",
+      "stroke": "#666",
+      "cursor": "pointer"
+    },
+    {
+      "comment": "登记状态-已登记",
+      "id": "27",
+      "width": "80",
+      "height": "100",
+      "fill": "#3dc237",
+      "stroke-width": "0.1",
+      "stroke": "#666",
+      "cursor": "pointer"
+    },
+    {
+      "comment": "登记状态-未登记",
+      "id": "28",
+      "width": "80",
+      "height": "100",
+      "fill": "#fe7e09",
+      "stroke-width": "0.1",
+      "stroke": "#666",
+      "cursor": "pointer"
+    },
+    {
+      "comment": "抵押状态-在建工程抵押",
+      "id": "29",
+      "width": "80",
+      "height": "100",
+      "fill": "#4a3aed",
+      "stroke-width": "0.1",
+      "stroke": "#666",
+      "cursor": "pointer"
+    },
+    {
+      "comment": "抵押状态-预告抵押",
+      "id": "30",
+      "width": "80",
+      "height": "100",
+      "fill": "#09b0fb",
+      "stroke-width": "0.1",
+      "stroke": "#666",
+      "cursor": "pointer"
+    },
+    {
+      "comment": "抵押状态-一般抵押",
+      "id": "31",
+      "width": "80",
+      "height": "100",
+      "fill": "#fe7e09",
+      "stroke-width": "0.1",
+      "stroke": "#666",
+      "cursor": "pointer"
+    },
+    {
+      "comment": "抵押状态-最高额抵押",
+      "id": "32",
+      "width": "80",
+      "height": "100",
+      "fill": "#ff0c18",
+      "stroke-width": "0.1",
+      "stroke": "#666",
+      "cursor": "pointer"
+    },
+    {
+      "comment": "抵押状态-无抵押",
+      "id": "33",
+      "width": "80",
+      "height": "100",
+      "fill": "#3dc237",
+      "stroke-width": "0.1",
+      "stroke": "#666",
+      "cursor": "pointer"
+    },
+    {
+      "comment": "查封状态-预售查封",
+      "id": "34",
+      "width": "80",
+      "height": "100",
+      "fill": "#4a3aed",
+      "stroke-width": "0.1",
+      "stroke": "#666",
+      "cursor": "pointer"
+    },
+    {
+      "comment": "查封状态-预购查封",
+      "id": "35",
+      "width": "80",
+      "height": "100",
+      "fill": "#09b0fb",
+      "stroke-width": "0.1",
+      "stroke": "#666",
+      "cursor": "pointer"
+    },
+    {
+      "comment": "查封状态-一般查封",
+      "id": "36",
+      "width": "80",
+      "height": "100",
+      "fill": "#ff0c18",
+      "stroke-width": "0.1",
+      "stroke": "#666",
+      "cursor": "pointer"
+    },
+    {
+      "comment": "查封状态-无查封",
+      "id": "37",
+      "width": "80",
+      "height": "100",
+      "fill": "#3dc237",
+      "stroke-width": "0.1",
+      "stroke": "#666",
+      "cursor": "pointer"
+    },
+    {
+      "comment": "冻结状态-已冻结",
+      "id": "38",
+      "width": "80",
+      "height": "100",
+      "fill": "#ff0c18",
+      "stroke-width": "0.1",
+      "stroke": "#666",
+      "cursor": "pointer"
+    },
+    {
+      "comment": "冻结状态-无冻结",
+      "id": "39",
+      "width": "80",
+      "height": "100",
+      "fill": "#3dc237",
+      "stroke-width": "0.1",
+      "stroke": "#666",
+      "cursor": "pointer"
+    },
+    {
+      "comment": "房间号样式",
+      "id": "888",
+      "type": "text",
+      "fill": "#fff",
+      "x": 10,
+      "y": 15,
+      "font-size": "8",
+      "font-family": "Arial-BoldMT"
+    },
+    {
+      "comment": "楼层号样式",
+      "id": "1200011",
+      "fill": "#044071",
+      "x": 30,
+      "y": 25,
+      "fontSize": "15",
+      "fontColor": "#fff"
+    },
+    {
+      "comment": "单元号样式",
+      "id": "1200012",
+      "fill": "#044071",
+      "x": 40,
+      "y": 25,
+      "fontSize": "15",
+      "fontColor": "#fff"
+    }
+  ],
+  "styleRule": [
+    {
+      "name": "房屋用途-住宅",
+      "entitytype": "room",
+      "condition": "condition == '10'",
+      "styleid": 1,
+      "filterorder": "1",
+      "comment": ""
+    },
+    {
+      "name": "房屋用途-非住宅",
+      "entitytype": "room",
+      "condition": "condition == '12'",
+      "styleid": 2,
+      "filterorder": "1",
+      "comment": ""
+    },
+    {
+      "name": "房屋性质-商品房",
+      "entitytype": "room",
+      "condition": "condition == '3901'",
+      "styleid": 3,
+      "filterorder": "1",
+      "comment": ""
+    },
+    {
+      "name": "房屋性质-安置房",
+      "entitytype": "room",
+      "condition": "condition == '3916'",
+      "styleid": 4,
+      "filterorder": "1",
+      "comment": ""
+    },
+    {
+      "name": "房屋性质-公祖房",
+      "entitytype": "room",
+      "condition": "condition == '3903'",
+      "styleid": 5,
+      "filterorder": "1",
+      "comment": ""
+    },
+    {
+      "name": "房屋性质-房改房",
+      "entitytype": "room",
+      "condition": "condition == '3910'",
+      "styleid": 6,
+      "filterorder": "1",
+      "comment": ""
+    },
+    {
+      "name": "房屋性质-直管公房",
+      "entitytype": "room",
+      "condition": "condition == '3912'",
+      "styleid": 7,
+      "filterorder": "1",
+      "comment": ""
+    },
+    {
+      "name": "房屋性质-经济适用房",
+      "entitytype": "room",
+      "condition": "condition == '3902'",
+      "styleid": 8,
+      "filterorder": "1",
+      "comment": ""
+    },
+    {
+      "name": "房屋性质-其他",
+      "entitytype": "room",
+      "condition": "condition == '3999'",
+      "styleid": 9,
+      "filterorder": "1",
+      "comment": ""
+    },
+    {
+      "name": "预销售状态-可售",
+      "entitytype": "room",
+      "condition": "condition == '1010'",
+      "styleid": 10,
+      "filterorder": "1",
+      "comment": ""
+    },
+    {
+      "name": "批准可售状态-不可售",
+      "entitytype": "room",
+      "condition": "condition == '1020'",
+      "styleid": 11,
+      "filterorder": "1",
+      "comment": ""
+    },
+    {
+      "name": "预销售状态-已预订",
+      "entitytype": "room",
+      "condition": "condition == '1101'",
+      "styleid": 12,
+      "filterorder": "1",
+      "comment": ""
+    },
+    {
+      "name": "预销售状态-已售",
+      "entitytype": "room",
+      "condition": "condition == '1102'|| condition == '1103'",
+      "styleid": 13,
+      "filterorder": "1",
+      "comment": ""
+    },
+    {
+      "name": "实际预销售状态-未售",
+      "entitytype": "room",
+      "condition": "condition == '1100'",
+      "styleid": 15,
+      "filterorder": "1",
+      "comment": ""
+    },
+    {
+      "name": "实际预销售状态-未售",
+      "entitytype": "room",
+      "condition": "condition == '9999'",
+      "styleid": 40,
+      "filterorder": "1",
+      "comment": ""
+    },
+    {
+      "name": "预售房屋用途-住宅",
+      "entitytype": "room",
+      "condition": "condition == '10'|| condition == '10102'",
+      "styleid": 16,
+      "filterorder": "1",
+      "comment": ""
+    },
+    {
+      "name": "预售房屋用途-商业",
+      "entitytype": "room",
+      "condition": "condition == '123'",
+      "styleid": 17,
+      "filterorder": "1",
+      "comment": ""
+    },
+    {
+      "name": "预售房屋用途-写字楼",
+      "entitytype": "room",
+      "condition": "condition == '126'",
+      "styleid": 18,
+      "filterorder": "1",
+      "comment": ""
+    },
+    {
+      "name": "预售房屋用途-物业用房",
+      "entitytype": "room",
+      "condition": "condition == '13101'||condition == '131'||condition == '13102'||condition == '13104'||condition == '1310101'||condition == '1310102'",
+      "styleid": 19,
+      "filterorder": "1",
+      "comment": ""
+    },
+    {
+      "name": "预售房屋用途-其他",
+      "entitytype": "room",
+      "condition": "condition == '13' || condition == '9999'",
+      "styleid": 20,
+      "filterorder": "1",
+      "comment": ""
+    },
+    {
+      "name": "公租房配租状态-未配租",
+      "entitytype": "room",
+      "condition": "condition == '0'",
+      "styleid": 21,
+      "filterorder": "1",
+      "comment": ""
+    },
+    {
+      "name": "公租房配租状态-已配租",
+      "entitytype": "room",
+      "condition": "condition == '1'|| condition == '2'",
+      "styleid": 22,
+      "filterorder": "1",
+      "comment": ""
+    },
+    {
+      "name": "公租房配租状态-已划拨",
+      "entitytype": "room",
+      "condition": "condition == '3'",
+      "styleid": 23,
+      "filterorder": "1",
+      "comment": ""
+    },
+    {
+      "name": "公租房配租状态-已选房",
+      "entitytype": "room",
+      "condition": "condition == '4'",
+      "styleid": 24,
+      "filterorder": "1",
+      "comment": ""
+    },
+    {
+      "name": "公租房配租状态-其他",
+      "entitytype": "room",
+      "condition": "condition == '5'",
+      "styleid": 100,
+      "filterorder": "1",
+      "comment": ""
+    },
+    {
+      "name": "缴交状态-已缴交",
+      "entitytype": "room",
+      "condition": "condition == '11111'",
+      "styleid": 25,
+      "filterorder": "1",
+      "comment": ""
+    },
+    {
+      "name": "缴交状态-未缴交",
+      "entitytype": "room",
+      "condition": "condition == '11112'",
+      "styleid": 26,
+      "filterorder": "1",
+      "comment": ""
+    },
+    {
+      "name": "登记状态-已登记",
+      "entitytype": "room",
+      "condition": "condition == '2901' || condition == '2902'",
+      "styleid": 27,
+      "filterorder": "1",
+      "comment": ""
+    },
+    {
+      "name": "登记状态-未登记",
+      "entitytype": "room",
+      "condition": "condition == '-1111'",
+      "styleid": 28,
+      "filterorder": "1",
+      "comment": ""
+    },
+    {
+      "name": "抵押状态-在建工程抵押",
+      "entitytype": "room",
+      "condition": "condition == '1405'",
+      "styleid": 29,
+      "filterorder": "1",
+      "comment": ""
+    },
+    {
+      "name": "抵押状态-预告抵押",
+      "entitytype": "room",
+      "condition": "condition == '1402'",
+      "styleid": 30,
+      "filterorder": "1",
+      "comment": ""
+    },
+    {
+      "name": "抵押状态-一般抵押",
+      "entitytype": "room",
+      "condition": "condition == '1404'",
+      "styleid": 31,
+      "filterorder": "1",
+      "comment": ""
+    },
+    {
+      "name": "抵押状态-最高额抵押",
+      "entitytype": "room",
+      "condition": "condition == '1407'",
+      "styleid": 32,
+      "filterorder": "1",
+      "comment": ""
+    },
+    {
+      "name": "抵押状态-无抵押",
+      "entitytype": "room",
+      "condition": "condition == '1400'",
+      "styleid": 33,
+      "filterorder": "1",
+      "comment": ""
+    },
+    {
+      "name": "查封状态-预售查封",
+      "entitytype": "room",
+      "condition": "condition == '1302'",
+      "styleid": 34,
+      "filterorder": "1",
+      "comment": ""
+    },
+    {
+      "name": "查封状态-预购查封",
+      "entitytype": "room",
+      "condition": "condition == '1303'",
+      "styleid": 35,
+      "filterorder": "1",
+      "comment": ""
+    },
+    {
+      "name": "查封状态-一般查封",
+      "entitytype": "room",
+      "condition": "condition == '-1112'",
+      "styleid": 36,
+      "filterorder": "1",
+      "comment": ""
+    },
+    {
+      "name": "查封状态-无查封",
+      "entitytype": "room",
+      "condition": "condition == '1300'",
+      "styleid": 37,
+      "filterorder": "1",
+      "comment": ""
+    },
+    {
+      "name": "冻结状态-已冻结",
+      "entitytype": "room",
+      "condition": "condition == '-1113'",
+      "styleid": 38,
+      "filterorder": "1",
+      "comment": ""
+    },
+    {
+      "name": "冻结状态-无冻结",
+      "entitytype": "room",
+      "condition": "condition == '000000000'",
+      "styleid": 39,
+      "filterorder": "1",
+      "comment": ""
+    },
+    {
+      "name": "房间号",
+      "entitytype": "roomlabel",
+      "condition": "true",
+      "styleid": 888,
+      "filterorder": "0",
+      "comment": ""
+    },
+    {
+      "name": "楼层号",
+      "entitytype": "floor",
+      "condition": "true",
+      "styleid": 1200011,
+      "filterorder": "0",
+      "comment": ""
+    },
+    {
+      "name": "单元号",
+      "entitytype": "unitNum",
+      "condition": "true",
+      "styleid": 1200012,
+      "filterorder": "0",
+      "comment": ""
+    }
+  ],
+  "entitytype": [
+    {
+      "name": "room",
+      "subentitytypes": [
+        {
+          "entitytype": "roomlabel",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "name": "floor",
+      "subentitytypes": [
+        {
+          "entitytype": "roomlabel",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "name": "unitNum",
+      "subentitytypes": [
+        {
+          "entitytype": "roomlabel",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "name": "headerG",
+      "subentitytypes": [
+        {
+          "entitytype": "roomlabel",
+          "type": "text"
+        }
+      ]
+    }
+  ]
+}
+
+
+
